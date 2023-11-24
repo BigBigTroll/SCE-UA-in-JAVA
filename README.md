@@ -1,4 +1,4 @@
-# SCE-UA-in-JAVA
+# SCE-UA-in-JAVA sceua
 
 SCEUA algorithm in JAVA
 
