@@ -3,6 +3,68 @@ import org.apache.commons.math3.random.RandomDataGenerator;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+    public static void main(String[] args) {
+
+        int maxn=10000;
+        int kstop=10;
+        double pcento=0.1;
+        double peps=0.001;
+        int iseed=-1;
+        int iniflg=0;// 初始值是最优解的时候不要包含进去
+
+        // 种群数 默认值为2
+        int ngs = 2;
+
+        SCEUA sce = new SCEUA();
+
+        // 问题代码
+//        int problemIndex = 1;
+//        double[] bl = {-2, -2};
+//        double[] bu = {2, 2};
+//        double[] x0 = {1, 1};
+
+//        int problemIndex = 2;
+//        double[] bl = {-5, -5};
+//        double[] bu = {5, 5};
+//        double[] x0 = {1, 1};
+
+//        int problemIndex = 3;
+//        double[] bl = {-5, -2};
+//        double[] bu = {5, 8};
+//        double[] x0 = {-0.08983, 0.7126};
+
+//        ngs = 10;
+//        int problemIndex = 4;
+//        double[] bl = {-5.12, -5.12};
+//        double[] bu = {5.12, 5.12};
+//        double[] x0 = {1, 0};
+
+//        int problemIndex = 5;
+//        double[] bl = new double[10];
+//        Arrays.fill(bl, -600);
+//        double[] bu = new double[10];
+//        Arrays.fill(bu, 600);
+//        double[] x0 = new double[10];
+
+//        int problemIndex = 6;
+//        double[] bl = new double[4];
+//        double[] bu = new double[4];
+//        Arrays.fill(bu, 10);
+//        double[] x0 = {4, 4, 4, 4};
+
+        int problemIndex = 7;
+        double[] bl = new double[6];
+        double[] bu = new double[6];
+        Arrays.fill(bu, 1);
+        double[] x0 = {0.201,0.150,0.477,0.275,0.311,0.657};
+
+        sce.sceua(x0, bl, bu,
+                maxn,  kstop,  pcento,  peps,
+                ngs,  iseed,  iniflg,
+                problemIndex);
+
+    }
+
 
 public void sceua(double[] x0, double[] bl, double[] bu,
                       int maxn, int kstop, double pcento, double peps,
