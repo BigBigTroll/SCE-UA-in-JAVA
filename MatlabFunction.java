@@ -40,7 +40,7 @@ public class MatlabFunction {
         // 遍历每一列
         for (int col = 0; col < dataIn[0].length; col++) {
             double sum = 0;
-            // 遍历前 n-1 行
+            
             for (int row = 0; row < dataIn.length; row++) {
                 sum += dataIn[row][col];
             }
